@@ -1,0 +1,43 @@
+<%- include('partials/header.ejs') %>
+
+    <body>
+        <%- include('partials/menu.ejs')%>
+            <div class="container">
+                <div class="card">
+                    <div class="card-header">
+                        <h5><font class="card text-bg-warning" style="max-width:all" color="#000ff0">Solicitar agendamento</font>
+                            <img src="../../imagens/icone_agendamentos.png" alt="Bootstrap" width="48" height="48" class="d-inline-block align-text-top">
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" action="/salvar-pergunta">
+                            <div class="mb-3">
+                                <label for="lblTitulo" class="form-label">Título (Nome, data, hora e especialista.)</label>
+                                <input type="text" class="form-control" id="lblTitulo" name="f_titulo"
+                                    placeholder="Ex.: João, 17/06, 15h, cabeleiraira" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="ttaDescricao" class="form-label">Contato e serviço (Celular, email, whatsapp, etc e serviço)</label>
+                                <textarea class="form-control" id="ttaDescricao" rows="3" name='f_descricao'
+                                    placeholder="Ex.: (12)91234-5678 whatsapp corte masculino"required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <input type="submit" class="btn btn-primary" value="Cadastrar">
+                                <a href="/" class="btn btn-danger">Cancelar</a>
+                            </div>
+                        </form>
+
+                        <br />
+                        <div class="container-md">
+                            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FSao_Paulo&showTitle=0&hl=pt_BR&src=Y19lOTVjNDJiMDMyYmU5MDg2NGZmYzM3YzRhZmQ1ODgwZmQyYzAzOWU1OWU5M2JjYWMyN2YxNzY0OGVkYTA4Yjc2QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23616161"
+                            style="border-width:0" class="d-block w-100" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                          </div>
+                        <br />
+                    </div>
+                </div>
+            </div>
+            
+
+</body>
+
+    <%- include('partials/foolter.ejs') %>

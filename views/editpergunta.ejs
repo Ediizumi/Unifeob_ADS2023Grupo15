@@ -1,0 +1,33 @@
+<%- include('partials/header.ejs') %>
+
+    <body>
+        <%- include('partials/menu.ejs')%>
+            <div class="container">
+                <div class="card">
+                    <div class="card-header">
+                        Editar Agendamento
+                    </div>
+                    <div class="card-body">
+                        <form method="post" action="/update-pergunta">
+                            <div class="mb-3">
+                                <label for="lblTitulo" class="form-label">Título</label>
+                                <input type="text" class="form-control" id="lblTitulo" name="f_titulo"
+                                    placeholder="DIGITE O TÍTULO DA PERGUNTA" required value="<%= pergunta.titulo %>">
+                            </div>
+                            <div class="mb-3">
+                                <label for="ttaDescricao" class="form-label">Descrição</label>
+                                <textarea class="form-control" id="ttaDescricao" rows="3" name='f_descricao'
+                                    required><%= pergunta.descricao %></textarea>
+                            </div>
+                            <input type="hidden" name="f_id" value="<%= pergunta.id %>">
+                            <div class="mb-3">
+                                <input type="submit" class="btn btn-warning" value="Atualizar">
+                                <a href="/" class="btn btn-danger">Cancelar</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </body>
+
+    <%- include('partials/foolter.ejs') %>
